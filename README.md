@@ -1,24 +1,50 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> The is a simple rails blog app that lets you navigate between users and their posts
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on Rails
+- Ruby
 
-* System dependencies
+## Getting Started
 
-* Configuration
+To get a local copy up and running follow;
 
-* Database creation
+`git clone https://github.com/chukwuemeka1234/blog.git`
 
-* Database initialization
+`cd blog`
 
-* How to run the test suite
+Run the server with:
 
-* Services (job queues, cache servers, search engines, etc.)
+`rails s`
 
-* Deployment instructions
+## Prerequisites
 
-* ...
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+
+## Install
+
+- Ruby
+- Ruby on Rails(as a gem)
+- Postgresql database
+
+## Authors
+
+👤 **Victor Chukwuemeka**
+
+- GitHub: [@githubhandle](https://github.com/chukwuemeka1234/)
+- Twitter: [@twitterhandle](https://twitter.com/@avc_victor)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/vic-chukwuemeka/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
