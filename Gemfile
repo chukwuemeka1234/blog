@@ -22,6 +22,8 @@ gem 'importmap-rails'
 gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem 'ffi', '~> 1.15', '>= 1.15.5'
+gem 'rails-controller-testing'
 gem 'rspec-rails', '~> 4.0.0'
 gem 'stimulus-rails'
 
