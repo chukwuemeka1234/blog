@@ -1,1 +1,17 @@
-<h1>Show page from posts</h1>
+<div>
+
+  <div>
+  <div>
+  <h2>Post : <%= @post.Title %> by <%= @user.name %></h2>
+  <h3>Comments: <%= @post.Comments_counter%>, Likes: <%= @post.Likes_counter %><h3>
+  </div>
+  <p><%= @post.text %></p>
+  </div>
+
+  <div>
+  <% @comments.each do |comment|%>
+    <h3><%= comment.text %></h3>
+    <% end %>
+  </div>
+
+</div>
