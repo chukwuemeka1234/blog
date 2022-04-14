@@ -19,6 +19,11 @@ Run the server with:
 
 `rails s`
 
+Create and migrate the database
+
+`rails db:create`
+`rails db:migrate`
+
 ## Prerequisites
 
 - Ruby

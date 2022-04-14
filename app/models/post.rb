@@ -11,6 +11,6 @@ class Post < ApplicationRecord
   private
 
   def update_posts_counter
-    author.increment!(:posts_counter)
+    author.increment!(:Posts_counter)
   end
 end
