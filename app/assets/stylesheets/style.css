@@ -105,3 +105,16 @@ img {
   border: none;
   gap: 20%;
 }
+
+.field {
+  display: flex;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.field .label {
+  background-color: #4bb8d3;
+}
