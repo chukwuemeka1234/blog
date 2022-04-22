@@ -48,6 +48,7 @@ gem 'bootsnap', require: false
 # gem 'webpacker'
 
 gem 'devise'
+gem 'cancancan'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
