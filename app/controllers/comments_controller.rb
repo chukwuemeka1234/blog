@@ -12,10 +12,20 @@ class CommentsController < ApplicationController
     )
     @new_comment.post_id = @post.id
     if @new_comment.save
-      redirect_to "/users/#{@post.author_id}/posts/#{@post.id}", notice: 'Saved'
+      redirect_to "/users/#{@post.author_id}/posts/#{@post.id}", notice: 'Saved!'
     else
       render :new, alert: 'Error!'
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:comment_id])
+    post = Post.find_by(id: @comment.post_id)
+    post.Comments_counter -= 1
+    @comment.destroy!
+    post.save
+    flash[:success] = 'Comment Deleted'
+    redirect_to user_post_path(post.author_id, post.id)
   end
 
   private

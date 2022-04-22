@@ -1,4 +1,7 @@
 <div class="user-a">
+<div class= 'nav'>
+  <h4>My Blog</h4>
+</div>
 
 <% @users.each do |user| %>
 <%= link_to user_path(user.id), class:"text-a" do %>
@@ -7,13 +10,14 @@
 Logged in as <%= @user.name %>
 <% end %>
 
-<div>
+<div class="user_cont">
  <img class="img" src="<%=user.photo %>">
 <div>
 <h3 class="username"> <%= user.name %> </h3>
 </div>
-<div>
-<p> Number of posts <%= user.Posts_counter %></p>
+<div class='posts'>
+<p> Number of posts:</p>
+<p class="pc"><%= user.Posts_counter %></p>
  </div>
 </div>
  <%end%>

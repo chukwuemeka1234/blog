@@ -1,28 +1,33 @@
 <div>
 
-<div class="img-c">
-<img src=<%= @user.photo %> alt="user photo"/>
-<div>
-<h2><%= @user.name %></h2>
-<p>Number of posts: <%= @user.Posts_counter%></p>
-</div>
-</div>
-
-<% @post.each do |post| %>
-  <%= link_to user_post_path(@user.id, post.id) do %>
-  <div class="recent-p>
-  <div>
-  <h2>Post : <%= post.Title %></h2>
-  <p><%= post.text %></p>
-  <h3>Comments: <%= post.Comments_counter%> Likes: <%= post.Likes_counter %></h3>
+  <div class="img-c">
+    <img src=<%= @user.photo %> alt="user photo"/>
+    <div>
+      <h2><%= @user.name %></h2>
+    <p>Number of posts: <%= @user.Posts_counter%></p>
+    </div>
   </div>
+
+<% @posts.each do |post| %>
+  <%= link_to user_post_path(@user.id, post.id) do %>
+  <div class="recent-p">
+    <div>
+      <h2>Post : <%= post.Title %></h2>
+        <p><%= post.text %></p>
+
+      <h3>Comments: <%= post.Comments_counter%> Likes: <%= post.Likes_counter %></h3>
+    </div>
+  
+  <% if can? :destroy, post %>
+        <%= button_to "Delete Post", user_post_path(@user.id, post.id), method: :delete %>
+      <%end%>
   <% end %>
 
-  <div>
-  <% post.recent_comments.each do |comment|%>
-    <h3><%= comment.author.name %>:<%= comment.text %></h3>
-    <% end %>
-    </div>
+    <div>
+    <% post.recent_comments.each do |comment|%>
+      <h3><%= comment.author.name %>:<%= comment.text %></h3>
+      <% end %>
+      </div>
   </div>
   <% end %>
 
