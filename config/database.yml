@@ -17,8 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: user_1
-  password: donbabachi123
+  username: postgres
+  password: dirtycode
   host: localhost
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -35,7 +35,7 @@ development:
   #username: blog
 
   # The password associated with the postgres role (username).
-  #password:
+  password: dirtycode
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -61,6 +61,7 @@ development:
 test:
   <<: *default
   database: blog_test
+  password: dirtycode
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
